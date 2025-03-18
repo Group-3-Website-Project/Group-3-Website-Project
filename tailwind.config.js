@@ -13,6 +13,9 @@ module.exports = {
         white: 'white',
         red: 'red',
       },
+      colors:{
+        "gray-bg":"#EFECEA",
+      },
     },
   },
   plugins: [

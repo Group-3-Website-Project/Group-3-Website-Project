@@ -17,15 +17,21 @@
 
     window.onload = () => {
         loadComponents('header', 'src/sections/header.html').then(()=>{
-            const icon = document.getElementById("icon")
-            const menu = document.getElementById("menu")
-            icon.addEventListener("click", openTab)
-            
-            function openTab(){ 
-                icon.src = icon.src == `${new URL(document.URL).origin}/assets/img/cancel.svg` ? "assets/img/menu.svg" : "assets/img/cancel.svg"
-                menu.classList.toggle("hidden")
-                menu.classList.toggle("flex")
-            } 
+            const icon = document.getElementById("icon");
+            const menu = document.getElementById("menu");
+
+            icon.addEventListener("click", openTab);
+
+            function openTab() { 
+                if (icon.querySelector("img").src.endsWith("menu.svg")) {
+                    icon.querySelector("img").src = "assets/img/cancel.svg";
+                } else {
+                    icon.querySelector("img").src = "assets/img/menu.svg";
+                }
+                
+                menu.classList.toggle("hidden");
+                menu.classList.toggle("flex");
+            }
         });
         loadComponents('hero', 'src/sections/hero.html');
         loadComponents('contact', 'src/sections/contact.html');
@@ -34,7 +40,7 @@
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
-<body class="bg-[#EFECEA]">
+<body class="bg-gray-bg">
     <div id="header"></div>
     <div id="hero"></div>
     <div id="about"></div>
