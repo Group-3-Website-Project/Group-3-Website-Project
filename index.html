@@ -19,7 +19,6 @@
         loadComponents('header', 'src/sections/header.html').then(()=>{
             const icon = document.getElementById("icon");
             const menu = document.getElementById("menu");
-            const body = document.querySelector("body");
 
             icon.addEventListener("click", openTab);
 
@@ -32,7 +31,6 @@
                 
                 menu.classList.toggle("hidden");
                 menu.classList.toggle("flex");
-                body.classList.toggle("overflow-hidden")    
             }
         });
         loadComponents('hero', 'src/sections/hero.html');
