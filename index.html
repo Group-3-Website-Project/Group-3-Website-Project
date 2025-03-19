@@ -8,7 +8,7 @@
 </head>
 <script>
     const loadComponents = (id, url) =>  {
-        fetch(url)
+        return fetch(url)
         .then((response) => response.text())
         .then((html) => {
             document.getElementById(id).innerHTML = html;
@@ -16,15 +16,37 @@
     }
 
     window.onload = () => {
-        loadComponents('header', 'src/sections/header.html');
+        loadComponents('header', 'src/sections/header.html').then(()=>{
+            const icon = document.getElementById("icon");
+            const menu = document.getElementById("menu");
+
+            icon.addEventListener("click", openTab);
+
+            function openTab() { 
+                if (icon.querySelector("img").src.endsWith("menu.svg")) {
+                    icon.querySelector("img").src = "assets/img/cancel.svg";
+                } else {
+                    icon.querySelector("img").src = "assets/img/menu.svg";
+                }
+                
+                menu.classList.toggle("hidden");
+                menu.classList.toggle("flex");
+            }
+        });
         loadComponents('hero', 'src/sections/hero.html');
         loadComponents('contact', 'src/sections/contact.html');
+        loadComponents('about', 'src/sections/about.html');
+        loadComponents("brand-strategy", "src/sections/brand-strategy.html");
+        loadComponents('acehotel', 'src/sections/acehotel.html');
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
-<body>
+<body class="bg-gray-bg">
     <div id="header"></div>
     <div id="hero"></div>
+    <div id="about"></div>
+    <div id="brand-strategy"></div>
+    <div id="acehotel"></div>
     <div id="contact"></div>
     <div id="footer"></div>
 </body>
