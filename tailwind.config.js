@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content:["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}", "./*.html"],
   theme: {
     extend: {
       textStrokeWidth: {
@@ -13,8 +13,8 @@ module.exports = {
         white: 'white',
         red: 'red',
       },
-      colors:{
-        "gray-bg":"#EFECEA",
+      colors: {
+        "gray-bg": "#EFECEA",
       },
     },
   },
