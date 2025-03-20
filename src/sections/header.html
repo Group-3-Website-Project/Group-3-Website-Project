@@ -5,12 +5,28 @@
             <p>EN</p>
         </div>
 
-        <img class="self-center w-40 sm:w-2/5" src="/assets/img/Baumeister.svg" alt="">
+        <img class="self-center w-40 sm:w-2/5 lg:w-1/5" src="/assets/img/Baumeister.svg" alt="">
         
         <!-- Icon -->
-        <div id="icon" class="flex items-center justify-center w-16 h-10 bg-black cursor-pointer" style="clip-path: path('M1.80534 3.45135L0 19.722L14.0904 34.7824L51.342 37.4718L63.5391 19.5875L45.6178 0L1.80534 3.45135Z');">
+        <div id="icon" class="flex items-center justify-center w-16 h-10 bg-black cursor-pointer lg:hidden" style="clip-path: path('M1.80534 3.45135L0 19.722L14.0904 34.7824L51.342 37.4718L63.5391 19.5875L45.6178 0L1.80534 3.45135Z');">
             <img class="sm:w-30" src="assets/img/menu.svg" alt="the menu and close icon">
         </div>
+
+        <ul class="hidden lg:flex items-end
+        flex-col font-sans bg-gray-bg">
+            <a class="hover:cursor-pointer" href="#about">
+                <li>About</li>
+            </a>
+            <a class="hover:cursor-pointer" href="#brand-strategy">
+                <li>Services</li>
+            </a>
+            <a class="hover:cursor-pointer" href="#acehotel">
+                <li>References</li>
+            </a>
+            <a class="hover:cursor-pointer" href="#">
+                <li>Contact</li>
+            </a>
+        </ul>
     </nav>
         
     <ul id="menu" class="hidden flex-col gap-14 text-green-900 text-3xl font-bold font-sans items-center absolute inset-0 bg-gray-bg w-full h-full z-10">
