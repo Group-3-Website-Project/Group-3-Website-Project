@@ -1,19 +1,21 @@
 <header class="contents">
-    <nav class="flex justify-between items-center p-4 mt-4 mx-4 sticky top-5 z-20">
-         <div class="sm:text-2xl font-normal flex flex-col">
+    <nav class="sticky top-0 z-20 flex items-center justify-between p-4 mx-4">
+         <div class="flex flex-col font-normal sm:text-2xl">
             <p>DE</p>
             <p>EN</p>
         </div>
 
-        <img class="self-center w-40 sm:w-2/5 lg:w-1/5" src="/assets/img/Baumeister.svg" alt="">
+        <a class="flex items-center justify-center" href="index.html">
+            <img src="/assets/img/gray.svg" style="display: var(--logo-bg, inline-block);" alt="" class="absolute -z-10 md:hidden">
+            <p class="text-3xl font-semibold md:-mt-8 md:text-5xl">Baumeister</p>
+        </a>
         
         <!-- Icon -->
-        <div id="icon" class="flex items-center justify-center w-16 h-10 bg-black cursor-pointer lg:hidden" style="clip-path: path('M1.80534 3.45135L0 19.722L14.0904 34.7824L51.342 37.4718L63.5391 19.5875L45.6178 0L1.80534 3.45135Z');">
+        <div id="icon" class="flex items-center justify-center w-16 h-10 bg-black cursor-pointer lg:hidden" style="background-color: var(--burger-menu-bg, black); clip-path: path('M1.80534 3.45135L0 19.722L14.0904 34.7824L51.342 37.4718L63.5391 19.5875L45.6178 0L1.80534 3.45135Z');">
             <img class="sm:w-30" src="assets/img/menu.svg" alt="the menu and close icon">
         </div>
 
-        <ul class="hidden lg:flex items-end
-        flex-col font-sans bg-gray-bg">
+        <ul class="flex-col items-end hidden font-sans lg:flex">
             <a class="hover:cursor-pointer" href="#about">
                 <li>About</li>
             </a>
@@ -23,13 +25,13 @@
             <a class="hover:cursor-pointer" href="#acehotel">
                 <li>References</li>
             </a>
-            <a class="hover:cursor-pointer" href="#">
+            <a class="hover:cursor-pointer">
                 <li>Contact</li>
             </a>
         </ul>
     </nav>
         
-    <ul id="menu" class="hidden flex-col gap-14 text-green-900 text-3xl font-bold font-sans items-center absolute inset-0 bg-gray-bg w-full h-full z-10">
+    <ul id="menu" class="absolute inset-0 z-10 flex-col items-center hidden w-full h-full font-sans text-3xl font-bold text-green-900 gap-14 bg-gray-bg">
         <li class="mt-44 sm:mt-22">About</li>
         <li>Services</li>
         <li>References</li>
