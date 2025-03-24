@@ -1,17 +1,21 @@
-<header class="contents">
+<div class="contents">
     <nav class="sticky top-0 z-20 flex items-center justify-between p-4 mx-4">
-         <div class="flex flex-col font-normal sm:text-2xl">
+        <div class="flex flex-col font-normal sm:text-2xl">
             <p>DE</p>
             <p>EN</p>
         </div>
 
         <a class="flex items-center justify-center" href="index.html">
-            <img src="/assets/img/gray.svg" style="display: var(--logo-bg, inline-block);" alt="" class="absolute -z-10 md:hidden">
+            <div class="md:hidden">
+                <img src="/assets/img/gray.svg" style="display: var(--logo-bg, inline-block);" alt=""
+                    class="absolute -z-10 -translate-x-3 -translate-y-5">
+            </div>
             <p class="text-3xl font-semibold md:-mt-8 md:text-5xl">Baumeister</p>
         </a>
-        
+
         <!-- Icon -->
-        <div id="icon" class="flex items-center justify-center w-16 h-10 bg-black cursor-pointer lg:hidden" style="background-color: var(--burger-menu-bg, black); clip-path: path('M1.80534 3.45135L0 19.722L14.0904 34.7824L51.342 37.4718L63.5391 19.5875L45.6178 0L1.80534 3.45135Z');">
+        <div id="icon" class="flex items-center justify-center w-16 h-10 bg-black cursor-pointer lg:hidden"
+            style="background-color: var(--burger-menu-bg, black); clip-path: path('M1.80534 3.45135L0 19.722L14.0904 34.7824L51.342 37.4718L63.5391 19.5875L45.6178 0L1.80534 3.45135Z');">
             <img class="sm:w-30" src="assets/img/menu.svg" alt="the menu and close icon">
         </div>
 
@@ -30,7 +34,7 @@
             </a>
         </ul>
     </nav>
-    
+  
     <div id="menu" class="flex-col absolute inset-0 isolate hidden bg-gray-bg w-full h-full z-10 justify-end overflow-clip">
         <img class="absolute -z-10 translate-y-[40%] md:translate-y-[20%]" src="assets\img\shapes.svg" alt="The shapes">
         <ul class="flex flex-col gap-14 text-green-900 text-3xl md:text-4xl font-bold font-sans items-center w-full h-full">
@@ -40,4 +44,4 @@
             <li>Contact</li>
         </ul>
     </div>
-</header>
+</div>
