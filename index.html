@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <title>Website project template</title>
+    <title>Home - Baumeister Website</title>
 </head>
 <script>
     const loadComponents = (id, url) =>  {
-        fetch(url)
+        return fetch(url)
         .then((response) => response.text())
         .then((html) => {
             document.getElementById(id).innerHTML = html;
@@ -16,16 +16,40 @@
     }
 
     window.onload = () => {
-        loadComponents('header', 'src/sections/header.html');
+        loadComponents('header', 'src/sections/header.html').then(()=>{
+            const icon = document.getElementById("icon");
+            const menu = document.getElementById("menu");
+            const body = document.querySelector("body");
+
+            icon.addEventListener("click", openTab);
+
+            function openTab() { 
+                if (icon.querySelector("img").src.endsWith("menu.svg")) {
+                    icon.querySelector("img").src = "assets/img/cancel.svg";
+                } else {
+                    icon.querySelector("img").src = "assets/img/menu.svg";
+                }
+                
+                menu.classList.toggle("hidden");
+                menu.classList.toggle("flex");
+                body.classList.toggle("overflow-hidden");
+            }
+        });
         loadComponents('hero', 'src/sections/hero.html');
-        loadComponents('contact', 'src/sections/contact.html');
+        loadComponents('about', 'src/sections/about.html');
+        loadComponents("brand-strategy", "src/sections/brand-strategy.html");
+        loadComponents('acehotel', 'src/sections/acehotel.html');
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
-<body>
-    <div id="header"></div>
-    <div id="hero"></div>
-    <div id="contact"></div>
-    <div id="footer"></div>
+<body class="bg-gray-bg">
+    <header id="header" class="contents"></header>
+    <main class="contents">
+        <section id="hero"></section>
+        <section id="about" class="contents"></section>
+        <section id="brand-strategy"></section>
+        <section id="acehotel"></section>
+    </main>
+    <footer id="footer"></footer>
 </body>
 </html>
