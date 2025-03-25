@@ -1,4 +1,4 @@
-<header class="contents">
+<div class="contents">
     <nav class="sticky top-0 z-20 flex items-center justify-between p-4 mx-4">
         <div class="flex flex-col font-normal sm:text-2xl">
             <p>DE</p>
@@ -7,8 +7,8 @@
 
         <a class="flex items-center justify-center" href="index.html">
             <div class="md:hidden">
-                <img src="/assets/img/gray.svg" style="display: var(--logo-bg, inline-block);" alt=""
-                    class="absolute -z-10 -translate-x-3 -translate-y-5">
+                <img src="/assets/img/gray.svg" style="display: var(--logo-bg, inline-block);" alt="Gray Background Shape"
+                    class="absolute -translate-x-3 -translate-y-5 -z-10">
             </div>
             <p class="text-3xl font-semibold md:-mt-8 md:text-5xl">Baumeister</p>
         </a>
@@ -34,12 +34,14 @@
             </a>
         </ul>
     </nav>
-
-    <ul id="menu"
-        class="hidden flex-col gap-14 text-green-900 text-3xl font-bold font-sans items-center absolute inset-0 bg-gray-bg w-full h-full z-10">
-        <li class="mt-44 sm:mt-22">About</li>
-        <li>Services</li>
-        <li>References</li>
-        <li>Contact</li>
-    </ul>
-</header>
+  
+    <div id="menu" class="absolute inset-0 z-10 flex-col justify-end hidden w-full h-full isolate bg-gray-bg overflow-clip">
+        <img class="absolute -z-10 translate-y-[40%] md:translate-y-[20%]" src="assets\img\shapes.svg" alt="The shapes">
+        <ul class="flex flex-col items-center w-full h-full font-sans text-3xl font-bold text-green-900 gap-14 md:text-4xl">
+            <li class="mt-36 sm:mt-22">About</li>
+            <li>Services</li> 
+            <li>References</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</div>

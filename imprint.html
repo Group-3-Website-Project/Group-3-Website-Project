@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <title>Website project template</title>
+    <title>Contact - Baumeister Website</title>
 </head>
 <script>
     const loadComponents = (id, url) =>  {
@@ -17,13 +17,13 @@
 
     window.onload = () => {
         loadComponents('header', 'src/sections/header.html');
-        loadComponents('imprint', 'src/sections/imprint.html');
+        loadComponents('imprint', 'src/sections/legal-notice.html');
         loadComponents('footer', 'src/sections/footer.html');
     }
 </script>
 <body class="text-green-800">
-    <div id="header" style="--logo-bg: none; --burger-menu-bg: #166534;"></div>
-    <div id="imprint"></div>
-    <div id="footer"></div>
+    <header id="header" style="--logo-bg: none; --burger-menu-bg: #166534;"></header>
+    <main id="imprint"></main>
+    <footer id="footer"></footer>
 </body>
 </html>
