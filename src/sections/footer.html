@@ -1,4 +1,32 @@
-<div>
-    <h1>Footer</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.</p>
+<div class="flex flex-col gap-10 p-5 font-semibold">
+  <div class="flex justify-center">
+    <img src="/assets/red.svg" alt="Red Background Shape" class="md:w-2/5" />
+  </div>
+  <div class="grid gap-10 md:grid-rows-2 lg:grid-rows-1 lg:grid-cols-2">
+    <div class="grid gap-10 md:flex md:justify-between">
+      <div>
+        <p>Agentur Baumeister</p>
+        <p>Böckhstraße 13</p>
+        <p>10967 Berlin</p>
+      </div>
+      <div>
+        <p class="underline">hallo@agentur-baumeister.com</p>
+        <p>+49 (0)30 - 490 827 87</p>
+      </div>
+    </div>
+
+    <ul class="flex justify-between lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:justify-items-end">
+      <li class="lg:col-start-1 lg:row-start-1">LinkedIn</li>
+      <li class="lg:col-start-2 lg:row-start-1">Instagram</li>
+      <li class="lg:col-start-3 lg:row-start-1 hover:cursor-pointer">
+        <a href="imprint.html">
+          Impressum
+        </a>
+      </li>
+      <li class="lg:col-start-3 lg:row-start-2 hover:cursor-pointer">
+        <a href="privacy-policy.html">
+          Datenschutz
+        </a>
+      </li>
+    </ul>
 </div>
